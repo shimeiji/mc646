@@ -14,17 +14,17 @@ public class FileList {
 	
 	public Collection<String> getNameList(){
 		ArrayList<String> list = new ArrayList<String>();
-		for (File e : recentList) {
-			list.add(e.getName());
-		}
+		list.add(0, "u6v2.pdf");
+		list.add(0, "u6v3.pdf");
+		list.add(0, "u6v4.pdf");
 		return list;
 	}
 	
 	public Collection<String> getPathList(){
 		ArrayList<String> list = new ArrayList<String>();
-		for (File e : recentList) {
-			list.add(e.getPath());
-		}
+		list.add(0, "C:\\Users\\ra139511\\Desktop\\u6v2.pdf");
+		list.add(0, "C:\\Users\\ra139511\\Desktop\\u6v3.pdf");
+		list.add(0, "C:\\Users\\ra139511\\Desktop\\u6v4.pdf");
 		return list;
 	}
 }
