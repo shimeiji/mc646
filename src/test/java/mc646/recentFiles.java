@@ -13,7 +13,9 @@ public class recentFiles {
 		FileList recentList = new FileList();
 		
 		recentList.addFile(file);
-		assertNull(recentList);
+		assertNotNull(recentList);
+		assertEquals("u6.pdf", file.getName());
+		assertEquals("C:\\Users\\ra139511\\Desktop\\u6.pdf", file.getPath());
 		
 	}
 
