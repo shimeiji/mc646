@@ -1,15 +1,19 @@
 package mc646;
 
 public class File {
+	String fileName;
+	String filePath;
+	
 	public File (String fileName, String filePath) {
-		
+		this.fileName = fileName;
+		this.filePath = filePath;
 	}
 	
 	public String getName() {
-		return "u6.pdf";
+		return this.fileName;
 	}
 	
 	public String getPath() {
-		return "C:\\Users\\ra139511\\Desktop\\u6.pdf";
+		return this.filePath;
 	}
 }
