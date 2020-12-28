@@ -10,7 +10,7 @@ import org.junit.Test;
 public class recentFiles {
 	
 	@Test
-	public void testRecentFilesLimitSize3() {
+	public void testRecentFiles() {
 		
 		FileList recentList = new FileList();
 		File file = new File("u6.pdf", "C:\\Users\\ra139511\\Desktop\\u6.pdf");
@@ -25,12 +25,14 @@ public class recentFiles {
 		
 		
 		ArrayList<String> listNames = new ArrayList<String>();
+		listNames.add(0, "u6.pdf");
 		listNames.add(0, "u6v2.pdf");
 		listNames.add(0, "u6v3.pdf");
 		listNames.add(0, "u6v4.pdf");
 		assertEquals(listNames, recentList.getNameList());
 		
 		ArrayList<String> listPaths = new ArrayList<String>();
+		listPaths.add(0, "C:\\Users\\ra139511\\Desktop\\u6.pdf");
 		listPaths.add(0, "C:\\Users\\ra139511\\Desktop\\u6v2.pdf");
 		listPaths.add(0, "C:\\Users\\ra139511\\Desktop\\u6v3.pdf");
 		listPaths.add(0, "C:\\Users\\ra139511\\Desktop\\u6v4.pdf");
