@@ -2,10 +2,10 @@ package mc646;
 import java.util.*;
 
 public class FileList {
-	Collection<File> recentList = new ArrayList<File>();
+	ArrayList<File> recentList = new ArrayList<File>();
 	
 	public void addFile(File file) {
-		this.recentList.add(file);
+		this.recentList.add(0, file);
 	}
 	
 	public Collection<File> getRecentList(){

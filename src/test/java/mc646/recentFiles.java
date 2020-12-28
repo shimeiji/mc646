@@ -10,7 +10,7 @@ import org.junit.Test;
 public class recentFiles {
 	
 	@Test
-	public void showRecentFiles() {
+	public void testRecentFilesLifo() {
 		
 		File file = new File("u6.pdf", "C:\\Users\\ra139511\\Desktop\\u6.pdf");
 		FileList recentList = new FileList();
@@ -21,13 +21,13 @@ public class recentFiles {
 		recentList.addFile(file2);
 		
 		ArrayList<String> listNames = new ArrayList<String>();
-		listNames.add("u6.pdf");
-		listNames.add("u6v2.pdf");
+		listNames.add(0, "u6.pdf");
+		listNames.add(0, "u6v2.pdf");
 		assertEquals(listNames, recentList.getNameList());
 		
 		ArrayList<String> listPaths = new ArrayList<String>();
-		listPaths.add("C:\\Users\\ra139511\\Desktop\\u6.pdf");
-		listPaths.add("C:\\Users\\ra139511\\Desktop\\u6v2.pdf");
+		listPaths.add(0, "C:\\Users\\ra139511\\Desktop\\u6.pdf");
+		listPaths.add(0, "C:\\Users\\ra139511\\Desktop\\u6v2.pdf");
 		assertEquals(listPaths, recentList.getPathList());
 		
 		
